@@ -29,7 +29,7 @@ def superdense_coding(bits):
     return qc
 
 # --- IBM Service and backend setup ---
-service = QiskitRuntimeService(channel="ibm_quantum_platform", token="_v9gTYOWfOOwvrDL9E00jnZxsKVyP0k9LwO6bKI9Q1ik")
+service = QiskitRuntimeService(channel="ibm_quantum_platform", token="")
 backend = service.backend("ibm_brisbane")
 sampler = Sampler(mode=backend)
 
@@ -68,5 +68,6 @@ print("\nMeasurement counts:", counts)
 measured = list(counts.keys())[0]  # single shot
 # Qiskit little-endian: 'c1c0'
 bob_bits = (int(measured[1]), int(measured[0]))  # qubit0 -> c0, qubit1 -> c1
+
 
 print(f"Bob received: {bob_bits}")
