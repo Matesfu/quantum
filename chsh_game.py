@@ -37,7 +37,7 @@ def chsh_circuit(x, y):
 
 
 # --- IBM Service and backend setup ---
-service = QiskitRuntimeService(channel="ibm_quantum_platform", token="_v9gTYOWfOOwvrDL9E00jnZxsKVyP0k9LwO6bKI9Q1ik")
+service = QiskitRuntimeService(channel="ibm_quantum_platform", token="")
 backend = service.backend("ibm_brisbane")
 sampler = Sampler(mode=backend)
 
@@ -79,6 +79,7 @@ bob = int(measured[0])    # c[1] corresponds to Bob
 
 print(f"Alice's output (a): {alice}")
 print(f"Bob's output   (b): {bob}")
+
 
 
 
